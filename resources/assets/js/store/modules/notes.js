@@ -13,8 +13,8 @@ const mutations = {
     state.notes.unshift(note)
   },
 
-  DELETE_NOTE(state, note) {
-    state.notes.splice(note, 1)
+  DELETE_NOTE(state, noteToDelete) {
+    state.notes = state.notes.filter(note => note.id != noteToDelete.id);
   }
 }
 
